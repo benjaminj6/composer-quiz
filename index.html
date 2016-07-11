@@ -12,17 +12,39 @@
 		<h1>Composer Quiz</h1>
 		<hr>
 	</header>
-	<section class="opening-screen"></section>
-	<section id="quiz">
-		<div id="questions-screen"></div>
-		<div id="answer-screen"></div>
+	<main id="quiz">
+		<div id="opening-screen">
+			<h1>Choose Your Difficulty</h2>
+			<button class="easy-button">Easy</button>
+			<button class="hard-button">Hard</button>
+			<button class="start-quiz-button">Begin Quiz</button>
+		</div>
+		<div id="questions-screen">	
+			<div class="question">
+				<h4 class="question-number">Question 1 of 5</h4>
+				<div class="current-score">
+					<h4>Score:</h4>
+					<ul>
+						<li>@</li>
+						<li>@</li>
+						<li>@</li>
+					</ul>
+				</div>	
+				<h3 class="current-question">Which composer was an obsessive perfectionist, even to the point of regularly synchronizing all of the clocks in his apartment?</h3>
+			</div>
+			<div id="answers">
+				<ul>
+					<li class="answer">Antonio Vivaldi</li>
+					<li class="answer">Ludwig Von Beethoven</li>
+					<li class="answer correct-answer">Dmitri Shostakovich</li>
+					<li class="answer">Gustav Mahler</li>
+				</ul>
+				<button id="submit-answer">Submit Answer</button>
+			</div>
+		</div>
+		<div id="feedback-screen"></div>
 		<div id="end-game-screen"></div>				
-	</section>
+	</main>
 
-	<!-- HTML FOR BUILDING EACH QUIZ QUESTION-->
-		<!-- EASY QUIZ -->
-
-		<!-- HARD QUIZ -->
- 
 </body> 
 </html>
