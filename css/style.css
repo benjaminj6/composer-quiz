@@ -1,34 +1,77 @@
 /*--- GLOBAL ---*/
+* {
+	font-weight: 200;
+	font-family: Helvetica;
+	outline: 1px dotted #777;
+}
+
 body {
 	background-color: #555;
 	color: white;
-	font-family: Helvetica;
-	font-weight: 200;
+}
+
+button {
+	border: none;
+	border-radius: 3.5px;
 }
 
 /*--- HEADER ---*/
 header {
 	padding: 30px;
 }
+
 header h1 {
 	margin: 0;
 	font-size: 2.5em;
 }
+
 header hr {}
 
 /*--- MAIN ---*/
 main {}
 
+main div.content-wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 /*--- #OPENING-SCREEN ---*/
-#opening-screen {}
-#opening-screen h3 {}
-#opening-screen .difficulty-buttons {}
+#opening-screen {
+	margin-top: 100px;
+	text-align: center;	
+}
+
+#opening-screen h3 {
+	font-size: 20px;
+}
+
+#opening-screen h4 {
+	font-size: 20px;
+}
+
+#opening-screen .difficulty-buttons {
+	font-size: 4px;
+}
+
+#opening-screen .difficulty-buttons button {
+	font-size: 18px;
+	width: 30%; /* 30% * 2 buttons = 60% of container */
+	height: 50px;
+}
+
 #opening-screen .difficulty-buttons button.easy {}
 #opening-screen .difficulty-buttons button.hard {}
-#opening-screen button.start-quiz {}
+#opening-screen button.start-quiz {
+	width: 60%;
+	height: 50px;
+	margin-top: 2px;
+}
 
 /*--- #QUESTIONS-SCREEN ---*/
-div#questions-screen {}
+div#questions-screen {
+	display: none;
+}
+
 #questions-screen div.question {}
 #questions-screen div.question h4.question-number {}
 #questions-screen div.question div.current-score {}
@@ -43,7 +86,10 @@ div#questions-screen {}
 #questions-screen div.answers button.submit {}
 
 /*--- #FEEDBACK-SCREEN ---*/
-div#feedback-screen {}
+div#feedback-screen {
+	display: none;
+}
+
 #feedback-screen h3 {}
 #feedback-screen hr {}
 #feedback-screen img {}
@@ -51,7 +97,10 @@ div#feedback-screen {}
 #feedback-screen button.next {}
 
 /*--- #END-GAME-SCREEN ---*/
-div#end-game-screen {}
+div#end-game-screen {
+	display: none;
+}
+
 #end-game-screen h3 {}
 #end-game-screen button.replay
 
