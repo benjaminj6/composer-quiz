@@ -5,15 +5,26 @@
 	outline: 1px dotted #777;
 }
 
+html { height: 100% }
 body {
-	background-color: #555;
+	min-height: 100%;
+	background: 
+		linear-gradient(
+			rgba(100,100,100,0.8),
+			rgba(100,100,100,0.8)
+		),
+		url('http://placebear.com/1000/1000');
+	background-size: cover;
+	background-repeat:no-repeat;
 	color: white;
+	/* opacity: 0.5; */
 }
 
 button {
 	border: none;
 	border-radius: 3.5px;
 }
+
 
 /*--- HEADER ---*/
 header {
@@ -38,36 +49,44 @@ main div.content-wrapper {
 /*--- #OPENING-SCREEN ---*/
 #opening-screen {
 	margin-top: 100px;
-	text-align: center;	
+	text-align: center;
+	margin: 100px auto 0;
+	max-width: 400px;
 }
 
 #opening-screen h3 {
-	font-size: 20px;
+	font-size: 24px;
 }
 
 #opening-screen h4 {
-	font-size: 20px;
+	font-size: 24px;
 }
 
 #opening-screen .difficulty-buttons {
-	font-size: 4px;
+	font-size: 0;
 }
 
 #opening-screen .difficulty-buttons button {
 	font-size: 18px;
-	width: 30%; /* 30% * 2 buttons = 60% of container */
+	width: 45%; /* 30% * 2 buttons = 60% of container */
 	height: 50px;
+	box-sizing: border-box;
+	/* border: 1px solid; */
 }
 
-#opening-screen .difficulty-buttons button.easy {}
-#opening-screen .difficulty-buttons button.hard {}
+#opening-screen .difficulty-buttons button.easy {
+  border-right: 1px solid #555;
+}
+#opening-screen .difficulty-buttons button.hard {
+  border-left: 1px solid #555;
+}
 #opening-screen button.start-quiz {
-	width: 60%;
+	width: 90%;
 	height: 50px;
 	margin-top: 2px;
 }
 
-/*--- #QUESTIONS-SCREEN ---*/
+/*--- #QUESTIONS-SCREEN ---*/	
 div#questions-screen {
 	display: none;
 }
