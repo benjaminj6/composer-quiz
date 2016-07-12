@@ -1,0 +1,48 @@
+/*--- HEADER ---*/
+header {}
+header h1 {}
+header hr {}
+
+/*--- MAIN ---*/
+main {}
+
+/*--- #OPENING-SCREEN ---*/
+#opening-screen {}
+#opening-screen h3 {}
+#opening-screen .difficulty-buttons {}
+#opening-screen .difficulty-buttons button.easy {}
+#opening-screen .difficulty-buttons button.hard {}
+#opening-screen button.start-quiz {}
+
+/*--- #QUESTIONS-SCREEN ---*/
+div#questions-screen {}
+#questions-screen div.question {}
+#questions-screen div.question h4.question-number {}
+#questions-screen div.question div.current-score {}
+#questions-screen div.current-score h4 {}
+#questions-screen div.current-score ul {}
+#questions-screen div.current-score ul li {}
+#questions-screen div.question h3.current-question {}
+#questions-screen div.answers {}
+#questions-screen div.answers ul {}
+#questions-screen div.answers ul li {}
+#questions-screen div.answers ul li.correct-answer {}
+#questions-screen div.answers button.submit {}
+
+/*--- #FEEDBACK-SCREEN ---*/
+div#feedback-screen {}
+#feedback-screen h3 {}
+#feedback-screen hr {}
+#feedback-screen img {}
+#feedback-screen p {}
+#feedback-screen button.next {}
+
+/*--- #END-GAME-SCREEN ---*/
+div#end-game-screen {}
+#end-game-screen h3 {}
+#end-game-screen button.replay
+
+
+
+
+

@@ -13,12 +13,14 @@
 		<h1>Composer Quiz</h1>
 		<hr>
 	</header>
-	<main id="quiz">
+	<main>
 		<div id="opening-screen">
-			<h1>Choose Your Difficulty</h2>
-			<button class="easy-button">Easy</button>
-			<button class="hard-button">Hard</button>
-			<button class="start-quiz-button">Begin Quiz</button>
+			<h3>Choose Your Difficulty</h2>
+			<div class="difficulty-buttons">
+				<button class="easy">Easy</button>
+				<button class="hard">Hard</button>
+			</div>
+			<button class="start-quiz">Begin Quiz</button>
 		</div>
 		<div id="questions-screen">	
 			<div class="question">
@@ -33,14 +35,14 @@
 				</div>	
 				<h3 class="current-question">Which composer was an obsessive perfectionist, even to the point of regularly synchronizing all of the clocks in his apartment?</h3>
 			</div>
-			<div id="answers">
+			<div class="answers">
 				<ul>
-					<li class="answer">Antonio Vivaldi</li>
-					<li class="answer">Ludwig Von Beethoven</li>
-					<li class="answer correct-answer">Dmitri Shostakovich</li>
-					<li class="answer">Gustav Mahler</li>
+					<li>Antonio Vivaldi</li>
+					<li>Ludwig Von Beethoven</li>
+					<li class="correct-answer">Dmitri Shostakovich</li>
+					<li>Gustav Mahler</li>
 				</ul>
-				<button id="submit-answer">Submit Answer</button>
+				<button class="submit">Submit Answer</button>
 			</div>
 		</div>
 		<div id="feedback-screen">
@@ -48,10 +50,11 @@
 			<hr>
 			<img src="http://placehold.it/300x300" alt="">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quam, perferendis iusto esse ipsum reiciendis recusandae ab quisquam nobis sapiente. Autem alias nam repudiandae quidem nisi ratione doloremque ut dolorum ab atque laudantium ducimus eos, vero itaque delectus sequi, quaerat magnam! Ipsum vitae eos facilis ipsa saepe animi, reprehenderit veritatis.</p>
+			<button class="next">Next >></button>
 		</div>
 		<div id="end-game-screen">
 			<h3>You finished the quiz. Your score was 3 out of 5. Would you like to play again?</h3>
-			<button>Try Again!</button>
+			<button class="replay">Try Again!</button>
 		</div>				
 	</main>
 
