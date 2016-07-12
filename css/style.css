@@ -1,6 +1,19 @@
+/*--- GLOBAL ---*/
+body {
+	background-color: #555;
+	color: white;
+	font-family: Helvetica;
+	font-weight: 200;
+}
+
 /*--- HEADER ---*/
-header {}
-header h1 {}
+header {
+	padding: 30px;
+}
+header h1 {
+	margin: 0;
+	font-size: 2.5em;
+}
 header hr {}
 
 /*--- MAIN ---*/
