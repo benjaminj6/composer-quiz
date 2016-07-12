@@ -45,23 +45,23 @@ main div.content-wrapper {
 	margin: 0 auto;
 }
 
-/*--- #OPENING-SCREEN ---*/
-#opening-screen {
+/*--- .OPENING-SCREEN ---*/
+.opening-screen {
 	margin-top: 100px;
 	text-align: center;
 	margin: 100px auto 0;
 	max-width: 400px;
 }
 
-#opening-screen h3 {
+.opening-screen h3 {
 	font-size: 24px;
 }
 
-#opening-screen .difficulty-buttons {
+.opening-screen .difficulty-buttons {
 	font-size: 0;
 }
 
-#opening-screen .difficulty-buttons button {
+.opening-screen .difficulty-buttons button {
 	font-size: 18px;
 	width: 45%; /* 30% * 2 buttons = 60% of container */
 	height: 50px;
@@ -69,54 +69,57 @@ main div.content-wrapper {
 	/* border: 1px solid; */
 }
 
-#opening-screen .difficulty-buttons button.easy {
+.opening-screen .difficulty-buttons button.easy {
   border-right: 1px solid #555;
 }
-#opening-screen .difficulty-buttons button.hard {
+.opening-screen .difficulty-buttons button.hard {
   border-left: 1px solid #555;
 }
-#opening-screen button.start-quiz {
+.opening-screen button.start-quiz {
 	width: 90%;
 	height: 50px;
 	margin-top: 2px;
 }
 
-/*--- #QUESTIONS-SCREEN ---*/	
-div#questions-screen {
+/*--- .QUESTIONS-SCREEN ---*/	
+div.questions-screen {}
+
+.questions-screen div.question {}
+.questions-screen div.question h4.question-number {}
+.questions-screen div.question div.current-score {}
+.questions-screen div.current-score h4 {}
+.questions-screen div.current-score ul {}
+.questions-screen div.current-score ul li {}
+.questions-screen div.question h3.current-question {}
+.questions-screen div.answers {}
+.questions-screen div.answers ul {}
+.questions-screen div.answers ul li {}
+.questions-screen div.answers ul li.correct-answer {}
+.questions-screen div.answers button.submit {}
+
+/*--- .FEEDBACK-SCREEN ---*/
+div.feedback-screen {}
+
+.feedback-screen h3 {}
+.feedback-screen hr {}
+.feedback-screen img {}
+.feedback-screen p {}
+.feedback-screen button.next {}
+
+/*--- .END-GAME-SCREEN ---*/
+div.end-game-screen {
 	display: none;
 }
 
-#questions-screen div.question {}
-#questions-screen div.question h4.question-number {}
-#questions-screen div.question div.current-score {}
-#questions-screen div.current-score h4 {}
-#questions-screen div.current-score ul {}
-#questions-screen div.current-score ul li {}
-#questions-screen div.question h3.current-question {}
-#questions-screen div.answers {}
-#questions-screen div.answers ul {}
-#questions-screen div.answers ul li {}
-#questions-screen div.answers ul li.correct-answer {}
-#questions-screen div.answers button.submit {}
+.end-game-screen h3 {}
+.end-game-screen button.replay {}
 
-/*--- #FEEDBACK-SCREEN ---*/
-div#feedback-screen {
+/*--- INTERACTIVE CLASSES ---*/
+
+/* Hidden class */
+.hidden {
 	display: none;
 }
-
-#feedback-screen h3 {}
-#feedback-screen hr {}
-#feedback-screen img {}
-#feedback-screen p {}
-#feedback-screen button.next {}
-
-/*--- #END-GAME-SCREEN ---*/
-div#end-game-screen {
-	display: none;
-}
-
-#end-game-screen h3 {}
-#end-game-screen button.replay
 
 
 
