@@ -25,7 +25,6 @@ button {
 	border-radius: 3.5px;
 }
 
-
 /*--- HEADER ---*/
 header {
 	padding: 30px;
@@ -55,10 +54,6 @@ main div.content-wrapper {
 }
 
 #opening-screen h3 {
-	font-size: 24px;
-}
-
-#opening-screen h4 {
 	font-size: 24px;
 }
 
