@@ -1,127 +1,168 @@
 /*--- GLOBAL ---*/
+
 * {
-	font-weight: 200;
-	font-family: Helvetica;
-	outline: 1px dotted #777;
+  font-weight: 200;
+  font-family: Helvetica;
+  outline: 1px dotted #777;
 }
 
-html { height: 100% }
+html {
+  height: 100%;
+}
+
 body {
-	min-height: 100%;
-	background: 
-		linear-gradient(
-			rgba(100,100,100,0.8),
-			rgba(100,100,100,0.8)
-		),
-		url('http://placebear.com/1000/1000');
-	background-size: cover;
-	background-repeat:no-repeat;
-	color: white;
-	/* opacity: 0.5; */
+  min-height: 100%;
+  background: linear-gradient( 
+	  	rgba(100, 100, 100, 0.8), 
+	  	rgba(100, 100, 100, 0.8)),
+                url('http://placebear.com/1000/1000');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white; /* opacity: 0.5; */
 }
 
 button {
-	border: none;
-	border-radius: 3.5px;
+  border: none;
+  border-radius: 3.5px;
 }
 
 /*--- HEADER ---*/
+
 header {
-	padding: 30px;
+  padding: 30px;
 }
 
 header h1 {
-	margin: 0;
-	font-size: 2.5em;
+  margin: 0;
+  font-size: 2.5em;
 }
 
-header hr {}
+header hr {
+}
 
 /*--- MAIN ---*/
-main {}
+
+main {
+}
 
 main div.content-wrapper {
-	max-width: 600px;
-	margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /*--- .OPENING-SCREEN ---*/
+
 .opening-screen {
-	margin-top: 100px;
-	text-align: center;
-	margin: 100px auto 0;
-	max-width: 400px;
+  margin-top: 100px;
+  text-align: center;
+  margin: 100px auto 0;
+  max-width: 400px;
 }
 
 .opening-screen h3 {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .opening-screen .difficulty-buttons {
-	font-size: 0;
+  font-size: 0;
 }
 
 .opening-screen .difficulty-buttons button {
-	font-size: 18px;
-	width: 45%; /* 30% * 2 buttons = 60% of container */
-	height: 50px;
-	box-sizing: border-box;
-	/* border: 1px solid; */
+  font-size: 18px;
+  width: 45%; /* 30% * 2 buttons = 60% of container */
+  height: 50px;
+  box-sizing: border-box; /* border: 1px solid; */
 }
 
 .opening-screen .difficulty-buttons button.easy {
   border-right: 1px solid #555;
 }
+
 .opening-screen .difficulty-buttons button.hard {
   border-left: 1px solid #555;
 }
+
 .opening-screen button.start-quiz {
-	width: 90%;
-	height: 50px;
-	margin-top: 2px;
+  width: 90%;
+  height: 50px;
+  margin-top: 2px;
 }
 
-/*--- .QUESTIONS-SCREEN ---*/	
-div.questions-screen {}
+/*--- .QUESTIONS-SCREEN ---*/
 
-.questions-screen div.question {}
-.questions-screen div.question h4.question-number {}
-.questions-screen div.question div.current-score {}
-.questions-screen div.current-score h4 {}
-.questions-screen div.current-score ul {}
-.questions-screen div.current-score ul li {}
-.questions-screen div.question h3.current-question {}
-.questions-screen div.answers {}
-.questions-screen div.answers ul {}
-.questions-screen div.answers ul li {}
-.questions-screen div.answers ul li.correct-answer {}
-.questions-screen div.answers button.submit {}
+div.questions-screen {
+}
+
+.questions-screen div.question-headers {
+}
+
+.questions-screen div.question-headers h4.question-number {
+  display: inline;
+}
+
+.questions-screen div.question-headers ul.current-score {
+  display: inline;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  float: right;
+}
+
+.questions-screen div.question-headers ul.current-score li {
+  display: inline;
+}
+
+.questions-screen h3.current-question {
+}
+
+.questions-screen ul.answers {
+}
+
+.questions-screen ul.answers li {
+}
+
+.questions-screen ul.answers li.correct-answer {
+}
+
+.questions-screen button.submit {
+}
 
 /*--- .FEEDBACK-SCREEN ---*/
-div.feedback-screen {}
 
-.feedback-screen h3 {}
-.feedback-screen hr {}
-.feedback-screen img {}
-.feedback-screen p {}
-.feedback-screen button.next {}
-
-/*--- .END-GAME-SCREEN ---*/
-div.end-game-screen {
-	display: none;
+div.feedback-screen {
 }
 
-.end-game-screen h3 {}
-.end-game-screen button.replay {}
+.feedback-screen h3 {
+}
+
+.feedback-screen hr {
+}
+
+.feedback-screen img {
+}
+
+.feedback-screen p {
+}
+
+.feedback-screen button.next {
+}
+
+/*--- .END-GAME-SCREEN ---*/
+
+div.end-game-screen {
+  display: none;
+}
+
+.end-game-screen h3 {
+}
+
+.end-game-screen button.replay {
+}
 
 /*--- INTERACTIVE CLASSES ---*/
 
 /* Hidden class */
+
 .hidden {
-	display: none;
+  display: none;
 }
-
-
-
-
-
