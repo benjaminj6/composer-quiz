@@ -7,18 +7,19 @@
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   min-height: 100%;
-  background: linear-gradient( 
+  background: 
+	  linear-gradient( 
 	  	rgba(100, 100, 100, 0.8), 
 	  	rgba(100, 100, 100, 0.8)),
-                url('http://placebear.com/1000/1000');
+    url('http://placebear.com/1000/1000');
   background-size: cover;
   background-repeat: no-repeat;
-  color: white; /* opacity: 0.5; */
+  color: white; 
 }
 
 button {
@@ -46,17 +47,18 @@ main {
 }
 
 main div.content-wrapper {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 600px;
+  padding: 0 5px;
 }
 
 /*--- .OPENING-SCREEN ---*/
 
 .opening-screen {
   margin-top: 100px;
-  text-align: center;
   margin: 100px auto 0;
   max-width: 400px;
+  text-align: center;
 }
 
 .opening-screen h3 {
@@ -68,10 +70,10 @@ main div.content-wrapper {
 }
 
 .opening-screen .difficulty-buttons button {
-  font-size: 18px;
-  width: 45%; /* 30% * 2 buttons = 60% of container */
-  height: 50px;
   box-sizing: border-box; /* border: 1px solid; */
+  font-size: 18px;
+  height: 50px;
+  width: 45%; /* 30% * 2 buttons = 60% of container */
 }
 
 .opening-screen .difficulty-buttons button.easy {
@@ -83,17 +85,21 @@ main div.content-wrapper {
 }
 
 .opening-screen button.start-quiz {
-  width: 90%;
   height: 50px;
   margin-top: 2px;
+  width: 90%;
 }
 
 /*--- .QUESTIONS-SCREEN ---*/
 
-div.questions-screen {
+div.questions-screen {/* margin-top: 50px; */
+  font-size: 20px;
+  text-align: center;
 }
 
 .questions-screen div.question-headers {
+  font-size: 16px;
+  text-align: left;
 }
 
 .questions-screen div.question-headers h4.question-number {
@@ -102,29 +108,46 @@ div.questions-screen {
 
 .questions-screen div.question-headers ul.current-score {
   display: inline;
-  padding-left: 0;
+  float: right;
   list-style: none;
   margin: 0;
-  float: right;
+  padding-left: 0;
 }
 
 .questions-screen div.question-headers ul.current-score li {
   display: inline;
+  margin-left: 15px;
+}
+
+.questions-screen div.question-headers ul.current-score li i {
 }
 
 .questions-screen h3.current-question {
+  font-size: 26px;
+  margin: 5px auto;
+  text-align: left;
 }
 
 .questions-screen ul.answers {
+  list-style: none;
+  margin: 80px auto 0;
+  padding-left: 0;
 }
 
 .questions-screen ul.answers li {
+  border-radius: 3.5px;
+  border: 1px solid red;
+  margin: 5px auto;
+  padding: 15px 0;
 }
 
 .questions-screen ul.answers li.correct-answer {
 }
 
 .questions-screen button.submit {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 100%;
 }
 
 /*--- .FEEDBACK-SCREEN ---*/
