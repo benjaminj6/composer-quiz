@@ -4,6 +4,7 @@
   font-weight: 200;
   font-family: Helvetica;
   outline: 1px dotted #777;
+  color:#fff;
 }
 
 html {
@@ -19,7 +20,6 @@ body {
     url('http://placebear.com/1000/1000');
   background-size: cover;
   background-repeat: no-repeat;
-  color: white; 
 }
 
 button {
@@ -70,10 +70,10 @@ main div.content-wrapper {
 }
 
 .opening-screen .difficulty-buttons button {
-  box-sizing: border-box; /* border: 1px solid; */
+  box-sizing: border-box; 
   font-size: 18px;
   height: 50px;
-  width: 45%; /* 30% * 2 buttons = 60% of container */
+  width: 45%; /* 45% * 2 buttons = 90% of container */
 }
 
 .opening-screen .difficulty-buttons button.easy {
@@ -92,7 +92,7 @@ main div.content-wrapper {
 
 /*--- .QUESTIONS-SCREEN ---*/
 
-div.questions-screen {/* margin-top: 50px; */
+div.questions-screen {
   font-size: 20px;
   text-align: center;
 }
@@ -100,6 +100,7 @@ div.questions-screen {/* margin-top: 50px; */
 .questions-screen div.question-headers {
   font-size: 16px;
   text-align: left;
+  opacity: 0.8;
 }
 
 .questions-screen div.question-headers h4.question-number {
@@ -119,8 +120,7 @@ div.questions-screen {/* margin-top: 50px; */
   margin-left: 15px;
 }
 
-.questions-screen div.question-headers ul.current-score li i {
-}
+.questions-screen div.question-headers ul.current-score li i {}
 
 .questions-screen h3.current-question {
   font-size: 26px;
@@ -136,7 +136,7 @@ div.questions-screen {/* margin-top: 50px; */
 
 .questions-screen ul.answers li {
   border-radius: 3.5px;
-  border: 1px solid red;
+  border: 1px solid #fff;
   margin: 5px auto;
   padding: 15px 0;
 }
@@ -153,21 +153,40 @@ div.questions-screen {/* margin-top: 50px; */
 /*--- .FEEDBACK-SCREEN ---*/
 
 div.feedback-screen {
+	background: rgba(250,250,250,0.4);
+	color: #000;
+	text-align: center;
+	padding: 10px;
 }
 
 .feedback-screen h3 {
+	font-size: 28px;
+	margin: 15px 0 0;
 }
-
-.feedback-screen hr {
-}
+.feedback-screen hr {}
 
 .feedback-screen img {
+	float: left;
+	width: 285px;
+	height: 300px;
+	object-fit: cover;
 }
 
 .feedback-screen p {
+	text-align: left;
+	height: 300px;
+	width: 285px;
+	display: inline-block;
+	margin: 0 0 0 10px;
+	font-size: 18px;
 }
 
 .feedback-screen button.next {
+	display:block;
+	margin: 15px auto;
+	width: 100%;
+	padding: 15px 0;
+	font-size: 20px;	
 }
 
 /*--- .END-GAME-SCREEN ---*/
@@ -176,11 +195,8 @@ div.end-game-screen {
   display: none;
 }
 
-.end-game-screen h3 {
-}
-
-.end-game-screen button.replay {
-}
+.end-game-screen h3 {}
+.end-game-screen button.replay {}
 
 /*--- INTERACTIVE CLASSES ---*/
 
