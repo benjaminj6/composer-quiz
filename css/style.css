@@ -17,7 +17,7 @@ body {
 	  linear-gradient( 
 	  	rgba(100, 100, 100, 0.8), 
 	  	rgba(100, 100, 100, 0.8)),
-    url('http://placebear.com/1000/1000');
+    url('http://placekitten.com/1000/1000');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -25,6 +25,8 @@ body {
 button {
   border: none;
   border-radius: 3.5px;
+  font-size: 20px;
+  padding: 15px 0;
 }
 
 /*--- HEADER ---*/
@@ -62,7 +64,7 @@ main div.content-wrapper {
 }
 
 .opening-screen h3 {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .opening-screen .difficulty-buttons {
@@ -71,8 +73,8 @@ main div.content-wrapper {
 
 .opening-screen .difficulty-buttons button {
   box-sizing: border-box; 
-  font-size: 18px;
-  height: 50px;
+  /*height: 50px;*/
+  /*padding: 15px 0;*/
   width: 45%; /* 45% * 2 buttons = 90% of container */
 }
 
@@ -146,7 +148,7 @@ div.questions-screen {
 
 .questions-screen button.submit {
   margin: 0 auto;
-  padding: 15px 0;
+  /*padding: 15px 0;*/
   width: 100%;
 }
 
@@ -157,6 +159,7 @@ div.feedback-screen {
 	color: #000;
 	text-align: center;
 	padding: 10px;
+	border-radius: 3.5px;
 }
 
 .feedback-screen h3 {
@@ -185,18 +188,24 @@ div.feedback-screen {
 	display:block;
 	margin: 15px auto;
 	width: 100%;
-	padding: 15px 0;
-	font-size: 20px;	
+	/*padding: 15px 0;*/
 }
 
 /*--- .END-GAME-SCREEN ---*/
 
 div.end-game-screen {
-  display: none;
+	max-width: 400px;
+	margin: 100px auto;
+	text-align: center;	
 }
 
-.end-game-screen h3 {}
-.end-game-screen button.replay {}
+.end-game-screen h3 {
+	font-size: 26px;
+	/*line-height: 2;*/
+}
+.end-game-screen button.replay {
+	width: 90%;
+}
 
 /*--- INTERACTIVE CLASSES ---*/
 
