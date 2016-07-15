@@ -2,33 +2,51 @@ $(document).ready(function () {
 
 /*--- QUIZ OBJECTS ---*/
 
-//quiz prototype
+//quiz template
 
-	//quiz-questions
+var quiz = {
 		//question (question1, question2, etc)
-			//question
-			//correct answer
-			//question number
-			//answer info
-			//answer picture
-			//create answer choices()
+		question: {
+			//question: '',
+			//correctAnswer: '',
+			//questionNumber: 1,
+			//answerInfo: '',
+			//answerPicture: '',
+			//incorrectAnswers: [],
+			//createQuizChoices - randomly creates an array of incorrect answers w/ the 
+			//correct answer inside.
+			createQuizChoices: function() {
+				return 'some code here';
 				//function() generates an array of random wrong choices & correct choice
 					//if random choice equals the correct choice then skip and run again.
 				//function() shuffles the new array of correct and wrong answers
-			//display question info - adds the appropriate info to the DOM
+			},
+			//display question info - adds the appropriate info to the DOM 'question-screen'
+			displayQuestionInfo: function(element) {
+				return 'some more code';
 				//question number - quiz.questionnumber
 				//#correct - default 0
 				//question - quiz.question
 				//answers - calls the create answer choices method
-			//display answer info
+			},
+			//evaluate selection()
+			evaluateAnswer: function() {
+				//checks if user's choice was correct or incorrect.				
+			},
+			//adds the information to DOM 'answer-screen'
+			displayAnswerInfo: function() {
+				return 'answer info code';
 				//the return value of evaluate
 				//the appropriate picture
-				//the appropriate paragraph
-			//evaluate selection()
-				//checks if user's choice was correct or incorrect.
-		//random answer choices = []
+				//the appropriate paragraph	
+			},
+		},
+};
 
 //easy = new quiz
+var easy = Object.create(quiz);
+easy.question1 = Object.create(quiz.question);
+console.log(easy.question1);
 	//questions
 		//question
 		//correct answer
@@ -88,8 +106,7 @@ $(document).ready(function () {
 		//hides current scree and shows the new game screen
 		//populates the new game screen with the appropriate information
 
-//end game 'screen'
-	// 
+//end game 'screen' 
 
 
 /*--- GENERAL FUNCTIONS ---*/
@@ -98,4 +115,4 @@ $(document).ready(function () {
 //button activate
 //newquestion - takes the question number as a parameter
 
-})
+});
