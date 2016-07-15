@@ -15,8 +15,8 @@ body {
   min-height: 100%;
   background: 
 	  linear-gradient( 
-	  	rgba(100, 100, 100, 0.8), 
-	  	rgba(100, 100, 100, 0.8)),
+	  	rgba(0, 0, 0, 0.7), 
+	  	rgba(0, 0, 0, 0.7)),
     url('http://placekitten.com/1000/1000');
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,29 +51,29 @@ main {
 }
 
 main div.content-wrapper {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   max-width: 600px;
   padding: 0 5px;
 }
 
 /*--- .OPENING-SCREEN ---*/
 
-.opening-screen {
+.new-game-screen {
   margin-top: 100px;
   margin: 100px auto 0;
   max-width: 400px;
   text-align: center;
 }
 
-.opening-screen h3 {
+.new-game-screen h3 {
   font-size: 26px;
 }
 
-.opening-screen .difficulty-buttons {
+.new-game-screen .difficulty-buttons {
   font-size: 0;
 }
 
-.opening-screen .difficulty-buttons button {
+.new-game-screen .difficulty-buttons button {
   box-sizing: border-box; 
   border: 1px solid rgba(255,255,255,0.3);
   background-color: rgba(0,0,0,0);
@@ -82,15 +82,15 @@ main div.content-wrapper {
   width: 45%; /* 45% * 2 buttons = 90% of container */
 }
 
-.opening-screen .difficulty-buttons button.easy {
+.new-game-screen .difficulty-buttons button.easy {
   /*border-right: 1px solid #555;*/
 }
 
-.opening-screen .difficulty-buttons button.hard {
+.new-game-screen .difficulty-buttons button.hard {
   /*border-left: 1px solid #555;*/
 }
 
-.opening-screen button.start-quiz {
+.new-game-screen button.start-quiz {
   /*height: 50px;*/
   margin-top: 2px;
   width: 90%;
@@ -136,21 +136,20 @@ div.questions-screen {
   font-family: 'Playfair Display', serif;
 }
 
-.questions-screen ul.answers {
+.questions-screen ul.choices {
   list-style: none;
   margin: 80px auto 0;
   padding-left: 0;
 }
 
-.questions-screen ul.answers li {
+.questions-screen ul.choices li {
   border-radius: 3.5px;
   border: 1px solid rgba(255,255,255,0.7);
   margin: 5px auto;
   padding: 15px 0;
 }
 
-.questions-screen ul.answers li.correct-answer {
-}
+.questions-screen ul.choices li.correct {}
 
 .questions-screen button.submit {
   margin: 0 auto;
@@ -159,9 +158,9 @@ div.questions-screen {
   opacity:0.3;
 }
 
-/*--- .FEEDBACK-SCREEN ---*/
+/*--- .ANSWER-SCREEN ---*/
 
-div.feedback-screen {
+div.answer-screen {
 	background: rgba(255,255,255,0.2);
 	color: #000;
 	text-align: center;
@@ -169,23 +168,23 @@ div.feedback-screen {
 	border-radius: 3.5px;
 }
 
-.feedback-screen h3 {
+.answer-screen h3 {
 	font-size: 28px;
 	margin: 15px 0 0;
 	font-family: 'Playfair Display', sans-serif;
 }
-.feedback-screen hr {
+.answer-screen hr {
 	margin: 15px 0;
 }
 
-.feedback-screen img {
+.answer-screen img {
 	float: left;
 	width: 285px;
 	height: 300px;
 	object-fit: cover;
 }
 
-.feedback-screen p {
+.answer-screen p {
 	text-align: left;
 	height: 300px;
 	width: 285px;
@@ -194,7 +193,7 @@ div.feedback-screen {
 	font-size: 18px;
 }
 
-.feedback-screen button.next {
+.answer-screen button.next {
 	display:block;
 	margin: 15px auto;
 	width: 100%;
