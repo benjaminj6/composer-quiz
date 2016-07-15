@@ -1,8 +1,5 @@
 $(document).ready(function() {
-	console.log(quiz.question3);
-//score
-	//counter
-	//function to increase the score that also adds the display
+
 
 /*--- EVENT HANDLERS ---*/
 
