@@ -94,7 +94,7 @@ main div.content-wrapper {
   /*height: 50px;*/
   margin-top: 2px;
   width: 90%;
-  opacity: 0.3;
+  /*opacity: 0.3;*/
 }
 
 /*--- .QUESTIONS-SCREEN ---*/
@@ -226,9 +226,10 @@ div.end-game-screen {
   display: none;
 }
 
-/* Active button class */
-.active {
-	opacity: 1 !important;
+/* Inactive button class */
+
+.inactive {
+  opacity: 0.3;
 }
 
 /* Selected item class */
@@ -239,4 +240,3 @@ div.end-game-screen {
 .hover {
 	background-color: rgba(255,255,255,0.2);
 }
-*/
