@@ -7,16 +7,16 @@ var easyQuestions = [
 		question: 'The 1984 film \'Amadeus\' was based off of the life of which famous composer?',
 		correctAnswer: 'Wolfgang Amadeus Mozart',
 		incorrectAnswers: ['John Cage', 'Karl Amadeus Hartmann', 'Igor Stravinsky'],
-		answerInfo: '',
-		answerPicture: '',
+		answerInfo: 'Wolfgang Amadeus Mozart (1756-1791) was a musical prodigy that had already performed in front of most of Europe\'s nobiility by the time he was ten. Despite being in high demand, he spent much of his career in debt due to living extravagantly. Mozart died of a sudden illness at the young age of 35. Some have suggested that he was poisoned by a rival composer named Salieri, as \'Amadeus\' portrays.',
+		answerPicture: 'images/mozart.jpg',
 	},
 	
 	{
 		question: 'Which composer wrote the film scores for \'Star Wars\', \'Jurassic Park\', and \'Indiana Jones\'?',
 		correctAnswer: 'John Williams',
 		incorrectAnswers: ['Hans Zimmer', 'Howard Shore', 'Michael Giacchino'],
-		answerInfo: '',
-		answerPicture: '',
+		answerInfo: '		John Williams is one of film\'s most prolific composers - he has won 5 Academy Awards, 4 Golden Globe Awards, 7 British Academy Film Awards, and 22 Grammy Awards (not to mention holding the record for the most award nominations held by a living person). Over his 60 years in the film industry he has composed over 130 scores, in addition to over 40 classical compositions.',
+		answerPicture: 'images/williams.jpg',
 	},
 
 	{
@@ -24,7 +24,7 @@ var easyQuestions = [
 		correctAnswer: 'Pyotr Ilych Tchaikovsky',
 		incorrectAnswers: ['Joseph Haydn', 'Edward Elgar', 'Franz Liszt'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/tchaikovsky.jpg',
 	},
 	
 	{
@@ -32,7 +32,7 @@ var easyQuestions = [
 		correctAnswer: 'Ludwig Von Beethoven',
 		incorrectAnswers: ['Wolfgang Amadeus Mozart', 'Johann Sebastian Bach', 'Frederic Chopin'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/beethoven.jpg',
 	},
 
 	{
@@ -40,7 +40,7 @@ var easyQuestions = [
 		correctAnswer: 'George Frideric Handel',
 		incorrectAnswers: ['Sergei Rachmaninov', 'Gustav Mahler', 'Felix Medlessohn'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/handel.jpg',
 	},		
 ];
 
@@ -51,7 +51,7 @@ var hardQuestions = [
 		correctAnswer: 'Green',
 		incorrectAnswers: ['Red', 'Yellow', 'Blue'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/hildegard.jpg',
 	},
 
 	{
@@ -59,7 +59,7 @@ var hardQuestions = [
 		correctAnswer: 'Dmitri Shostakovich',
 		incorrectAnswers: ['Antonio Vivaldi, Ludwig von Beethoven', 'Gustav Mahler'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/shostakovich.jpg',
 	},
 
 	{
@@ -67,7 +67,7 @@ var hardQuestions = [
 		correctAnswer: 'John Cage',
 		incorrectAnswers: ['Anton Webern', 'Arnold Schoenberg', 'Edward Elgar'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/cage.jpg',
 	},
 
 	{
@@ -75,15 +75,15 @@ var hardQuestions = [
 		correctAnswer: 'Johann Sebastian Bach',
 		incorrectAnswers: ['George Gershwin'. 'Gustav Mahler', 'Johann Strauss'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/bach.jpg',
 	},
 
 	{
 		question: 'Which composer died of a chill after coming home from the pub one night only to find that his wife had locked him out?',
-		correctAnswer: '',
-		incorrectAnswers: [],
+		correctAnswer: 'Henry Purcell',
+		incorrectAnswers: ['Pyotr Ilych Tchaikovsky', 'Frederic Chopin', 'Hector Berlioz'],
 		answerInfo: '',
-		answerPicture: '',
+		answerPicture: 'images/purcell.jpg',
 	},
 ];
 
