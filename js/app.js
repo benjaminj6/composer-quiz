@@ -8,7 +8,8 @@ var incIndex = (function() {
 		if (cnt < 5) {
 			return cnt++;
 		} else {
-			return cnt = 0;
+			cnt = 0;
+			return cnt++;
 		}
 	};
 }());
@@ -20,7 +21,8 @@ var incScore = (function() {
 		if(cnt <= 5) {
 			return ++cnt;
 		} else {
-			return cnt = 0;
+			cnt = 0;
+			return 0;
 		}
 	};
 }());
@@ -96,7 +98,7 @@ $('.next').click(function() {
 			current = incIndex();
 			displayQuestion(current);
 		} else {
-			var finalScore = $('.current-score li').length - 1
+			var finalScore = $('.current-score li').length - 1;
 			displayEnd(finalScore);
 			defaultValues();
 			//go to new-game screen and restore defaults

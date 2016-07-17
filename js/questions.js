@@ -57,7 +57,7 @@ var hard = [
 	{ //question2
 		question: 'Which composer was such an obsessive perfectionist that he regularly synchronized all of the clocks in his apartment?',
 		correct: 'Dmitri Shostakovich',
-		choices: ['Antonio Vivaldi,' 'Ludwig Van Beethoven', 'Gustav Mahler', 'Dmitri Shostakovich'],
+		choices: ['Antonio Vivaldi', 'Ludwig Van Beethoven', 'Gustav Mahler', 'Dmitri Shostakovich'],
 		info: '',
 		picture: 'images/shostakovich.jpg',
 	},
