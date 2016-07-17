@@ -7,7 +7,7 @@ var easy = [
 		question: 'The 1984 film \'Amadeus\' was based off of the life of which famous composer?',
 		correct: 'Wolfgang Amadeus Mozart',
 		choices: ['John Cage', 'Karl Amadeus Hartmann', 'Igor Stravinsky', 'Wolfgang Amadeus Mozart'],
-		info: 'Wolfgang Amadeus Mozart (1756-1791) was a musical prodigy that had already performed in front of most of Europe\'s nobiility by the time he was ten. Despite being in high demand, he spent much of his career in debt due to living extravagantly. Mozart died of a sudden illness at the young age of 35. Some have suggested that he was poisoned by a rival composer named Salieri, as \'Amadeus\' portrays.',
+		info: 'Wolfgang Amadeus Mozart (1756-1791) was a musical prodigy that had already performed in front of most of Europe\'s nobiility by the time he was ten. Despite being in high demand, he spent much of his career in debt due to his extravangant lifestyle. Mozart died of a sudden illness at the young age of 35. Some have suggested that he was poisoned by a rival composer named Salieri, as shown in \'Amadeus\'.',
 		picture: 'images/mozart.jpg',
 	},
 	

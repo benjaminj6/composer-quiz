@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
-/*--- PURE FUNCTIONS ---*/
-
-//crawls through index of chosen array - when done returns to 0
+/*--- CLOSURE FUNCTIONS ---*/
 var incIndex = (function() {
 	var cnt = 0;
 
@@ -15,7 +13,6 @@ var incIndex = (function() {
 	};
 }());
 
-//increases and stores the current score value
 var incScore = (function() {
 	var cnt = 0;
 
@@ -34,6 +31,7 @@ var current = incIndex();
 var score = 0;
 
 /*--- EVENT HANDLERS ---*/
+
 // NEW-GAME SCREEN
 $('.difficulty-buttons button').hover(function() {
 	$(this).toggleClass('hover');
@@ -61,7 +59,6 @@ $('.start-quiz').click(function() {
 });
 
 // QUESTIONS-SCREEN
-
 $('.choices').on('mouseenter mouseleave', 'li', function() {
 	$(this).toggleClass('hover');
 });
@@ -72,27 +69,47 @@ $('.choices').on('click', 'li', function() {
 	$('.submit').removeClass('inactive');
 });
 
-//.submit button pressed
 $('.submit').click(function() {
 	$('.questions-screen').toggleClass('hidden');
 
 	displayAnswer();
 
-	if($('.choices .selected').text() === quiz[current].correct) {
-		$('.answer-screen h3').text('Correct!');
-		$('.current-score').append('<li><i class="fa fa-music" aria-hidden="true"></i></li>');
-		var a = incScore();
-		console.log(a);
-	}
+	if ($('.choices .selected').text() === quiz[current].correct) {
+  $('.answer-screen h3').text('Correct!');
+  $('.current-score').append('<li class="symbol"><i class="fa fa-music" aria-hidden="true"></i></li>');
+  incScore();
+}
+
 });
-	//display answer stuff
-	//if evaluate(selected, quiz[i].correctAnswer) === true
-		//change header text
-		//add to score
+
+// ANSWERS-SCREEN
+
+//next question click
+$('.next').click(function() {
+		$('.answer-screen').toggleClass('hidden');
+		$('.choices').empty();
+		
+
+		if (current < 4) {
+			current = incIndex();
+			displayQuestion(current);
+		} else {
+			var finalScore = $('.current-score li').length - 1
+			displayEnd(finalScore);
+			//go to new-game screen and restore defaults
+		}
+			//increase current
+			//displayQuestion(current)
+		//otherwise go to final screen AND reset everything
+
+});
+
+			
+
+
 
 /*-----------------------------------------------------------------------*/
-// ANSWERS-SCREEN
-// END-GAME SCREEN
+
 
 /*--- FUNCTIONS ---*/
 function displayQuestion(x) {
@@ -111,6 +128,22 @@ function displayAnswer() {
 	$('.answer-screen h3').text('Incorrect!');
 	$('.answer-screen img').attr('src', quiz[current].picture);
 	$('.answer-screen p').text(quiz[current].info);	
+}
+
+function displayEnd(score) {
+	$('.new-game-screen').toggleClass('hidden');
+	$('.first').text('Your final score was ' + score + ' out of 5!');
+	$('.second').text('Would you like to play again?').append('<br> Please select a difficulty:');
+}
+
+function defaultValues() {
+	$('.selected').removeClass('.selected');
+	$('.start-quiz').addClass('.inactive');
+	$('.submit').addClass('inactive');
+	$('.fa.fa-music').parent().remove();
+
+	quiz = null;
+
 }
 
 });

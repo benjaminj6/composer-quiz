@@ -99,7 +99,7 @@ main div.content-wrapper {
 
 /*--- .QUESTIONS-SCREEN ---*/
 
-div.questions-screen {
+.questions-screen {
   font-size: 20px;
   text-align: center;
 }
@@ -159,7 +159,7 @@ div.questions-screen {
 
 /*--- .ANSWER-SCREEN ---*/
 
-div.answer-screen {
+.answer-screen {
 	background: rgba(255,255,255,0.2);
 	color: #000;
 	text-align: center;
@@ -203,7 +203,7 @@ div.answer-screen {
 
 /*--- .END-GAME-SCREEN ---*/
 
-div.end-game-screen {
+.end-game-screen {
 	max-width: 400px;
 	margin: 100px auto;
 	text-align: center;	
