@@ -3,7 +3,7 @@ $(document).ready(function() {
 /*--- PURE FUNCTIONS ---*/
 
 //crawls through index of chosen array - when done returns to 0
-var index = (function() {
+var incIndex = (function() {
 	var cnt = 0;
 
 	return function cycle() {
@@ -16,7 +16,7 @@ var index = (function() {
 }());
 
 //increases and stores the current score value
-var score = (function() {
+var incScore = (function() {
 	var cnt = 0;
 
 	return function() {
@@ -30,17 +30,17 @@ var score = (function() {
 
 /*--- GLOBAL VARIABLES ---*/
 var quiz;
+current = incIndex();
 
 /*--- FUNCTIONS ---*/
 function displayQuestion(x) {
- 	var currentQuestion = quiz[x];
  	
  	$('.questions-screen').removeClass('hidden');
  	$('.question-number').text('Question ' + (x + 1) + ' of 5');
-	$('.current-question').text(currentQuestion.question);
+	$('.current-question').text(quiz[x].question);
 	
-	for (var i = 0; i < currentQuestion.choices.length; i++) {
-		$('.choices').append('<li>' + currentQuestion.choices[i] + '</li');
+	for (var i = 0; i < quiz[x].choices.length; i++) {
+		$('.choices').append('<li>' + quiz[x].choices[i] + '</li');
 	}
 }
 
@@ -51,10 +51,14 @@ function displayQuestion(x) {
 $('.difficulty-buttons button').hover(function() {
 	$(this).toggleClass('hover');
 })
-//difficulty-buttons click toggle selected
-	//start-quiz click toggle inactive
+
+$('.difficulty-buttons button').click(function() {
+	$('.difficulty-buttons').children().removeClass('selected');
+	$(this).toggleClass('selected');
+	$('.start-quiz').removeClass('inactive');
+})	
+
 $('.start-quiz').click(function() { 
-	//validate that button is active
 	if($(this).hasClass('inactive') === false) {			
 		var choice = $('.difficulty-buttons').find('.selected');
 		
@@ -65,13 +69,21 @@ $('.start-quiz').click(function() {
 		}
 		
 		$('.new-game-screen').addClass('hidden');
-		displayQuestion(index());			
+		displayQuestion(current);
 	}
-
 });
 
 // QUESTIONS-SCREEN
-	//
+
+//.choices li hover
+//.choices li click
+//.submit button pressed
+	//evaluate
+	//display answer stuff
+	//increase counter
+
+
+/*-----------------------------------------------------------------------*/
 // ANSWERS-SCREEN
 // END-GAME SCREEN
 
