@@ -33,22 +33,33 @@ var index = (function() {
 
 var quiz;
 /*--- FUNCTIONS ---*/
-//function selectQuiz(selection)
 //displayQuestion(currentQuestion)
 //changeScreen(current, next)
 
-quiz = easy;
-console.log(quiz);
-quiz = hard;
-console.log(quiz);
 /*--- EVENT HANDLERS ---*/
 // NEW-GAME SCREEN
 	//difficulty-buttons hover toggle hover
 	//difficulty-buttons click toggle selected
-		//start-quiz click toggle active
-	//start-quiz click 
-		//find the selected quiz and sets global variable quiz equal to that.
-		//displayQuestion()	
+		//start-quiz click toggle inactive
+	$('.start-quiz').click(function() { 
+		//validate that button is active
+		if($(this).hasClass('inactive') === true) {
+			//find the selected quiz and sets global variable quiz equal to that.
+			var choice = $('.difficulty-buttons').find('.selected');
+			if (choice.hasClass('easy') === true) { 
+				return quiz = easy; 
+			} else {
+				return quiz = hard;
+			}
+			// if(/*choice.hasClass(easy)*/) { 
+			// 	return quiz = easy 
+			// } else {
+			// 	return quiz = hard;
+			// }
+			//displayQuestion()				
+		}
+
+	});
 
 // QUESTIONS-SCREEN
 	//
