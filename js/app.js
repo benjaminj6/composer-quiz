@@ -32,31 +32,17 @@ var incScore = (function() {
 var quiz;
 current = incIndex();
 
-/*--- FUNCTIONS ---*/
-function displayQuestion(x) {
- 	
- 	$('.questions-screen').removeClass('hidden');
- 	$('.question-number').text('Question ' + (x + 1) + ' of 5');
-	$('.current-question').text(quiz[x].question);
-	
-	for (var i = 0; i < quiz[x].choices.length; i++) {
-		$('.choices').append('<li>' + quiz[x].choices[i] + '</li');
-	}
-}
-
-//changeScreen(current, next)
-
 /*--- EVENT HANDLERS ---*/
 // NEW-GAME SCREEN
 $('.difficulty-buttons button').hover(function() {
 	$(this).toggleClass('hover');
-})
+});
 
 $('.difficulty-buttons button').click(function() {
 	$('.difficulty-buttons').children().removeClass('selected');
 	$(this).toggleClass('selected');
 	$('.start-quiz').removeClass('inactive');
-})	
+});	
 
 $('.start-quiz').click(function() { 
 	if($(this).hasClass('inactive') === false) {			
@@ -76,19 +62,36 @@ $('.start-quiz').click(function() {
 // QUESTIONS-SCREEN
 
 //.choices li hover
+$('.choices').on('mouseenter mouseleave', 'li', function() {
+	$(this).toggleClass('hover');
+});
 //.choices li click
+$('.choices').on('click', 'li', function() {
+	$('.choices').children().removeClass('selected');
+	$(this).toggleClass('selected');
+	$('.submit').removeClass('inactive');
+});
 //.submit button pressed
-	//evaluate
 	//display answer stuff
-	//increase counter
-
+	//if evaluate(selected, quiz[i].correctAnswer) === true
+		//change header text
+		//add to score
 
 /*-----------------------------------------------------------------------*/
 // ANSWERS-SCREEN
 // END-GAME SCREEN
 
-
-
-
+/*--- FUNCTIONS ---*/
+function displayQuestion(x) {
+ 	
+ 	$('.questions-screen').removeClass('hidden');
+ 	$('.question-number').text('Question ' + (x + 1) + ' of 5');
+	$('.current-question').text(quiz[x].question);
+	
+	for (var i = 0; i < quiz[x].choices.length; i++) {
+		$('.choices').append('<li>' + quiz[x].choices[i] + '</li');
+	}
+}
 
 });
+
