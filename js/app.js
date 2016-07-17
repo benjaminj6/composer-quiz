@@ -6,60 +6,69 @@ $(document).ready(function() {
 var index = (function() {
 	var cnt = 0;
 
-	return function() {
-		if (cnt < 4) {
+	return function cycle() {
+		if (cnt < 5) {
 			return cnt++;
 		} else {
-			return cnt = 0;	//sets the limit at 0 before counter resets.
-		};
-	}
+			cnt = 0;
+		}
+	};
 }());
 
 //increases and stores the current score value
-var index = (function() {
-	var score = 0;
+var score = (function() {
+	var cnt = 0;
 
 	return function() {
-		if(score < 5) {
-			return ++score;
+		if(cnt < 5) {
+			return ++cnt;
 		} else {
-			return score = 0;
+			cnt = 0;
 		}
-	}
+	};
 }());
 
 /*--- GLOBAL VARIABLES ---*/
-//var quiz = selectQuiz() return value;
-
 var quiz;
+
 /*--- FUNCTIONS ---*/
-//displayQuestion(currentQuestion)
+function displayQuestion(x) {
+ 	var currentQuestion = quiz[x];
+ 	
+ 	$('.questions-screen').removeClass('hidden');
+ 	$('.question-number').text('Question ' + (x + 1) + ' of 5');
+	$('.current-question').text(currentQuestion.question);
+	
+	for (var i = 0; i < currentQuestion.choices.length; i++) {
+		$('.choices').append('<li>' + currentQuestion.choices[i] + '</li');
+	}
+}
+
 //changeScreen(current, next)
 
 /*--- EVENT HANDLERS ---*/
 // NEW-GAME SCREEN
-	//difficulty-buttons hover toggle hover
-	//difficulty-buttons click toggle selected
-		//start-quiz click toggle inactive
-	$('.start-quiz').click(function() { 
-		//validate that button is active
-		if($(this).hasClass('inactive') === true) {
-			//find the selected quiz and sets global variable quiz equal to that.
-			var choice = $('.difficulty-buttons').find('.selected');
-			if (choice.hasClass('easy') === true) { 
-				return quiz = easy; 
-			} else {
-				return quiz = hard;
-			}
-			// if(/*choice.hasClass(easy)*/) { 
-			// 	return quiz = easy 
-			// } else {
-			// 	return quiz = hard;
-			// }
-			//displayQuestion()				
+$('.difficulty-buttons button').hover(function() {
+	$(this).toggleClass('hover');
+})
+//difficulty-buttons click toggle selected
+	//start-quiz click toggle inactive
+$('.start-quiz').click(function() { 
+	//validate that button is active
+	if($(this).hasClass('inactive') === false) {			
+		var choice = $('.difficulty-buttons').find('.selected');
+		
+		if (choice.hasClass('easy') === true) { 
+			quiz = easy; 
+		} else {
+			quiz = hard;
 		}
+		
+		$('.new-game-screen').addClass('hidden');
+		displayQuestion(index());			
+	}
 
-	});
+});
 
 // QUESTIONS-SCREEN
 	//
