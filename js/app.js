@@ -8,7 +8,7 @@ var incIndex = (function() {
 		if (cnt < 5) {
 			return cnt++;
 		} else {
-			cnt = 0;
+			return cnt = 0;
 		}
 	};
 }());
@@ -20,7 +20,7 @@ var incScore = (function() {
 		if(cnt <= 5) {
 			return ++cnt;
 		} else {
-			cnt = 0;
+			return cnt = 0;
 		}
 	};
 }());
@@ -146,6 +146,8 @@ function defaultValues() {
 	$('.fa.fa-music').parent().remove();
 
 	quiz = null;
+// TODO: find out way to bring current back to 0.
+	current = incIndex();
 
 }
 
