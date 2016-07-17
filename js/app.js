@@ -70,14 +70,17 @@ $('.choices').on('click', 'li', function() {
 });
 
 $('.submit').click(function() {
-	$('.questions-screen').toggleClass('hidden');
+	if($(this).hasClass('inactive') === false) {
+		$('.submit').addClass('inactive');
+		$('.questions-screen').toggleClass('hidden');
 
-	displayAnswer();
+		displayAnswer();
 
-	if ($('.choices .selected').text() === quiz[current].correct) {
-  $('.answer-screen h3').text('Correct!');
-  $('.current-score').append('<li class="symbol"><i class="fa fa-music" aria-hidden="true"></i></li>');
-  incScore();
+		if ($('.choices .selected').text() === quiz[current].correct) {
+	  $('.answer-screen h3').text('Correct!');
+	  $('.current-score').append('<li class="symbol"><i class="fa fa-music" aria-hidden="true"></i></li>');
+	  incScore();
+	}
 }
 
 });
@@ -89,13 +92,13 @@ $('.next').click(function() {
 		$('.answer-screen').toggleClass('hidden');
 		$('.choices').empty();
 		
-
 		if (current < 4) {
 			current = incIndex();
 			displayQuestion(current);
 		} else {
 			var finalScore = $('.current-score li').length - 1
 			displayEnd(finalScore);
+			defaultValues();
 			//go to new-game screen and restore defaults
 		}
 			//increase current
@@ -137,8 +140,8 @@ function displayEnd(score) {
 }
 
 function defaultValues() {
-	$('.selected').removeClass('.selected');
-	$('.start-quiz').addClass('.inactive');
+	$('.selected').removeClass('selected');
+	$('.start-quiz').addClass('inactive');
 	$('.submit').addClass('inactive');
 	$('.fa.fa-music').parent().remove();
 
