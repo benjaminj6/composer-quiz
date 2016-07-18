@@ -3,7 +3,6 @@
 * {
   font-weight: 300;
   font-family: 'Open Sans', sans-serif;
-  /*outline: 1px dotted #777;*/
   color:#fff;
 }
 
@@ -27,14 +26,23 @@ button {
   border-radius: 3.5px;
   font-size: 20px;
   padding: 15px 0;
-  background-color: rgba(100,160,190,1);
+  background-color: rgb(100,160,190);
+  opacity: 0.3;
 }
 
 button:hover {
   background-color: rgba(95,155,185,1);
 }
 
-/*--- GENERAL CLASSES FOR STYLING ---*/
+button:focus {
+  outline: none;
+}
+
+.choice:hover {
+  background-color: rgba(255,255,255,0.2)!important;
+}
+
+/*--- GENERAL STYLING CLASSES ---*/
 
 .color-text {
   color: rgba(100,160,190,1);
@@ -80,28 +88,29 @@ main div.content-wrapper {
   font-size: 26px;
 }
 
-.new-game-screen .difficulty-buttons {
+.difficulty-buttons {
   font-size: 0;
 }
 
-.new-game-screen .difficulty-buttons button {
+.difficulty-buttons button {
   box-sizing: border-box; 
   border: 2px solid rgba(255,255,255,0.3);
   background-color: rgba(0,0,0,0);
+  opacity: 1;
   /*height: 50px;*/
   /*padding: 15px 0;*/
   width: 45%; /* 45% * 2 buttons = 90% of container */
 }
 
-.new-game-screen .difficulty-buttons button.easy {
+.difficulty-buttons button.easy {
   /*border-right: 1px solid #555;*/
 }
 
-.new-game-screen .difficulty-buttons button.hard {
+.difficulty-buttons button.hard {
   /*border-left: 1px solid #555;*/
 }
 
-.new-game-screen button.start-quiz {
+button.start-quiz {
   /*height: 50px;*/
   margin-top: 2px;
   width: 90%;
@@ -115,56 +124,60 @@ main div.content-wrapper {
   text-align: center;
 }
 
-.questions-screen div.question-headers {
+.question-headers {
   font-size: 16px;
   text-align: left;
   opacity: 0.8;
 }
 
-.questions-screen div.question-headers h4.question-number {
+.question-headers h4.question-number {
   display: inline;
 }
 
-.questions-screen div.question-headers ul.current-score {
+.question-headers .current-score {
+  float:right;
+  color: red;
+}
+
+.current-score h4 {
   display: inline;
-  float: right;
-  list-style: none;
-  margin: 0;
+}
+
+.current-score ul {
+  display: inline;
   padding-left: 0;
 }
 
-.questions-screen div.question-headers ul.current-score li {
+.current-score ul li.symbol {
   display: inline;
-  margin-left: 15px;
+  margin-left: 20px;
+  list-style: none;
 }
 
-.questions-screen div.question-headers ul.current-score li i {}
+.current-score ul li i {}
 
-.questions-screen h3.current-question {
+h3.current-question {
   font-size: 26px;
   margin: 5px auto;
   text-align: left;
   font-family: 'Playfair Display', serif;
 }
 
-.questions-screen ul.choices {
+ul.choices {
   list-style: none;
   margin: 80px auto 0;
   padding-left: 0;
 }
 
-.questions-screen ul.choices li {
+ul.choices li {
   border-radius: 3.5px;
   border: 1px solid rgba(255,255,255,0.7);
   margin: 5px auto;
   padding: 15px 0;
 }
 
-.questions-screen ul.choices li.correct {}
-
-.questions-screen button.submit {
+button.submit {
   margin: 0 auto;
-  /*padding: 15px 0;*/
   width: 100%;
 }
 
@@ -210,6 +223,7 @@ main div.content-wrapper {
 	/*padding: 15px 0;*/
 }
 
+/*--- FOOTER ---*/
 footer {
   margin-top: 100px;
   padding: 30px;
@@ -225,17 +239,13 @@ footer {
   display: none;
 }
 
-/* Inactive button class */
-
-.inactive {
-  opacity: 0.3;
+.active {
+  opacity: 1;
 }
 
-.hover {
-	background-color: rgba(255,255,255,0.2) !important;
-}
 /* Selected item class */
-.selected {
-  background-color: rgba(255,255,255,0.5) !important;   
+.selected, .selected:hover {
+  background-color: rgba(255,255,255,0.5) !important;  
 }
+
 

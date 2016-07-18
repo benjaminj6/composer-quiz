@@ -38,7 +38,7 @@ var easy = [
 	{ //question5
 		question: 'Which composer is best known for writing the \'Hallelujah Chorus\'? (Hint: it\'s most often performed at Christmastime)',
 		correct: 'George Frideric Handel',
-		choices: ['George Frideric Handel', 'Sergei Rachmaninov', 'Gustav Mahler', 'Felix Medlessohn'],
+		choices: ['George Frideric Handel', 'Sergei Rachmaninov', 'Gustav Mahler', 'Felix Mendlessohn'],
 		info: 'The \'Hallelujah Chorus\' was written by George Frideric Handel as part of an oratorio called \'The Messiah\'. An oratorio is a large composition written for an orchestra, choir, and soloists. Although Handel originally wrote \'The Messiah\' for a smaller orchestra and choir, modern productions have been known to perform the piece with 300-piece orchestras and 500-voice choirs (or larger!)',
 		picture: 'images/handel.jpg',
 	},	
