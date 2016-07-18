@@ -41,7 +41,8 @@ var easy = [
 		choices: ['George Frideric Handel', 'Sergei Rachmaninov', 'Gustav Mahler', 'Felix Medlessohn'],
 		info: 'The \'Hallelujah Chorus\' was written by George Frideric Handel as part of an oratorio called \'The Messiah\'. An oratorio is a large composition written for an orchestra, choir, and soloists. Although Handel originally wrote \'The Messiah\' for a smaller orchestra and choir, modern productions have been known to perform the piece with 300-piece orchestras and 500-voice choirs (or larger!)',
 		picture: 'images/handel.jpg',
-	},		
+	},	
+
 ];
 
 var hard = [
@@ -50,7 +51,7 @@ var hard = [
 		question: 'What was Hildegard von Bingen\'s favorite color?',
 		correct: 'Green',
 		choices: ['Green', 'Red', 'Yellow', 'Blue'],
-		info: '',
+		info: 'Hildegard von Bingen (1098-1179) was a Benedictine nun that is one of the first female composers that we have record of. She wrote a play called \'Ordo Virtutum\' (Order of the Virtues) which depicts a battle between the Virtues and the Devil for a human soul. Hildegard was known to be fond of the color green as it symoblized regeneration and renewal in creation.',
 		picture: 'images/hildegard.jpg',
 	},
 
@@ -58,7 +59,7 @@ var hard = [
 		question: 'Which composer was such an obsessive perfectionist that he regularly synchronized all of the clocks in his apartment?',
 		correct: 'Dmitri Shostakovich',
 		choices: ['Antonio Vivaldi', 'Ludwig Van Beethoven', 'Gustav Mahler', 'Dmitri Shostakovich'],
-		info: '',
+		info: 'Dmitri Shostakovich (1906-1975) was a Russian composer marked by his complicated relationship with the Soviet Union. In 1936 he was denounced by the USSR after Joseph Stalin attended (and disliked) one of his operas. His Fifth Symphony was written as an apology to Stalin. In addition to synchronizing his clocks, he also regularly sent himself letters to test the postal service.',
 		picture: 'images/shostakovich.jpg',
 	},
 
@@ -66,7 +67,7 @@ var hard = [
 		question: 'Which composer is well known for his piece 4\'33", in which the performer sits siilently for 4 minutes and 33 seconds?',
 		correct: 'John Cage',
 		choices: ['Anton Webern', 'Arnold Schoenberg', 'John Cage', 'Edward Elgar'],
-		info: '',
+		info: 'John Cage (1912-1992) is one of the leading figures of 20th century avante-garde music. His music is marked by the concept that "all sound is music" – including traffic lights, speech, and tea whistling! 4\'33" is a large source of controversy, as many argue that it is not music since there are no sounds played by the performer. Others argue that the sounds happening within the audience are the music.',
 		picture: 'images/cage.jpg',
 	},
 
@@ -74,15 +75,15 @@ var hard = [
 		question: 'Which composer was the father of 20 children?',
 		correct: 'Johann Sebastian Bach',
 		choices: ['Johann Sebastian Bach', 'George Gershwin', 'Gustav Mahler', 'Johann Strauss'],
-		info: '',
+		info: 'Johann Sebastian Bach (1685-1750) was a German composer that spent his life writing music for both the German nobility and the Lutheran Church. Bach\'s music is marked by its precision and logical form. Of the 20 children that Bach fathered, only 10 survived to adulthood, and 5 of his sons went on into successful music careers of their own.',
 		picture: 'images/bach.jpg',
 	},
 
 	{ //question5
-		question: 'Which composer died of a chill after coming home from the pub one night only to find that his wife had locked him out?',
+		question: 'Which composer died of a chill after coming home one night only to find that his wife had locked him out?',
 		correct: 'Henry Purcell',
 		choices: ['Pyotr Ilych Tchaikovsky', 'Henry Purcell', 'Frederic Chopin', 'Hector Berlioz'],
-		info: '',
+		info: 'Although Henry Purcell (1659-1695) only lived for 35 years, he managed to greatly influence the musical landscape of Englandin the 1600s. Although Purcell worked as a church musician, he also composed music for operas and plays. An alternate theory regarding his death is that he ate poisoned chocolate.',
 		picture: 'images/purcell.jpg',
 	},
 ];

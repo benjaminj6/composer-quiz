@@ -15,7 +15,6 @@ var incIndex = (function() {
 
 var quiz;
 var current = incIndex();
-var score = 0;
 
 /*--- EVENT HANDLERS ---*/
 
@@ -89,7 +88,7 @@ $('.next').click(function() {
 function displayQuestion(x) {
  	
  	$('.questions-screen').removeClass('hidden');
- 	$('.question-number').text('Question ' + (x + 1) + ' of 5');
+ 	$('.question-number').text('Question ' + (x + 1) + ' of ' + quiz.length);
 	$('.current-question').text(quiz[x].question);
 	
 	for (var i = 0; i < quiz[x].choices.length; i++) {
@@ -102,11 +101,15 @@ function displayAnswer() {
 	$('.answer-screen h3').text('Incorrect!');
 	$('.answer-screen img').attr('src', quiz[current].picture);
 	$('.answer-screen p').text(quiz[current].info);	
+
+	if(current === 4) {
+		$('.answer-screen button').text('See Your Score!');
+	}
 }
 
 function displayEnd(score) {
 	$('.new-game-screen').toggleClass('hidden');
-	$('.first').text('Your final score was ' + score + ' out of 5!');
+	$('.first').text('Your final score was ' + score + ' out of ' + quiz.length + '!');
 	$('.second').text('Would you like to play again?').append('<br> Please select a difficulty:');
 }
 
@@ -117,9 +120,7 @@ function defaultValues() {
 	$('.fa.fa-music').parent().remove();
 
 	quiz = null;
-// TODO: find out way to bring current back to 0.
 	current = incIndex();
-
 }
 
 });
