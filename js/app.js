@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-/*--- CLOSURE FUNCTIONS ---*/
+/*--- GLOBAL VARIABLES ---*/
 var incIndex = (function() {
 	var cnt = 0;
 
@@ -14,7 +13,6 @@ var incIndex = (function() {
 	};
 }());
 
-/*--- GLOBAL VARIABLES ---*/
 var quiz;
 var current = incIndex();
 var score = 0;
@@ -73,8 +71,6 @@ $('.submit').click(function() {
 });
 
 // ANSWERS-SCREEN
-
-//next question click
 $('.next').click(function() {
 		$('.answer-screen').toggleClass('hidden');
 		$('.choices').empty();
@@ -86,9 +82,7 @@ $('.next').click(function() {
 			var finalScore = $('.current-score li').length - 1;
 			displayEnd(finalScore);
 			defaultValues();
-			//go to new-game screen and restore defaults
 		}
-
 });
 
 /*--- FUNCTIONS ---*/

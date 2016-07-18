@@ -210,24 +210,6 @@ main div.content-wrapper {
 	/*padding: 15px 0;*/
 }
 
-
-
-/*--- .END-GAME-SCREEN ---*/
-
-.end-game-screen {
-	max-width: 400px;
-	margin: 100px auto;
-	text-align: center;	
-}
-
-.end-game-screen h3 {
-	font-size: 26px;
-	/*line-height: 2;*/
-}
-.end-game-screen button.replay {
-	width: 90%;
-}
-
 footer {
   margin-top: 100px;
   padding: 30px;
