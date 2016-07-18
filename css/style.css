@@ -17,8 +17,8 @@ body {
 	  linear-gradient( 
 	  	rgba(0, 0, 0, 0.7), 
 	  	rgba(0, 0, 0, 0.7)),
-    url('http://placekitten.com/1000/1000');
-  background-size: cover;
+    url('../images/music-paper.jpg');
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -217,6 +217,13 @@ main div.content-wrapper {
 	width: 90%;
 }
 
+footer {
+  margin-top: 100px;
+  padding: 30px;
+  font-size: 10px;
+  opacity: 0.5;
+  text-align:center;
+}
 /*--- INTERACTIVE CLASSES ---*/
 
 /* Hidden class */

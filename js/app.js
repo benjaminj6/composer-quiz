@@ -14,19 +14,6 @@ var incIndex = (function() {
 	};
 }());
 
-var incScore = (function() {
-	var cnt = 0;
-
-	return function() {
-		if(cnt <= 5) {
-			return ++cnt;
-		} else {
-			cnt = 0;
-			return 0;
-		}
-	};
-}());
-
 /*--- GLOBAL VARIABLES ---*/
 var quiz;
 var current = incIndex();
@@ -79,12 +66,10 @@ $('.submit').click(function() {
 		displayAnswer();
 
 		if ($('.choices .selected').text() === quiz[current].correct) {
-	  $('.answer-screen h3').text('Correct!');
-	  $('.current-score').append('<li class="symbol"><i class="fa fa-music" aria-hidden="true"></i></li>');
-	  incScore();
+	  	$('.answer-screen h3').text('Correct!');
+	  	$('.current-score').append('<li class="symbol"><i class="fa fa-music" aria-hidden="true"></i></li>');
+		}
 	}
-}
-
 });
 
 // ANSWERS-SCREEN
@@ -103,18 +88,8 @@ $('.next').click(function() {
 			defaultValues();
 			//go to new-game screen and restore defaults
 		}
-			//increase current
-			//displayQuestion(current)
-		//otherwise go to final screen AND reset everything
 
 });
-
-			
-
-
-
-/*-----------------------------------------------------------------------*/
-
 
 /*--- FUNCTIONS ---*/
 function displayQuestion(x) {
