@@ -67,7 +67,7 @@ $('.submit').click(function() {
 
 		if ($('.choices .selected').text() === quiz[current].correct) {
 	  	$('.answer-screen h3').text('Correct!');
-	  	$('.current-score').append('<li class="symbol"><i class="fa fa-music" aria-hidden="true"></i></li>');
+	  	$('.current-score').append('<li class="symbol"><i class="fa fa-music color-text" aria-hidden="true"></i></li>');
 		}
 	}
 });
