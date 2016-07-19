@@ -110,6 +110,7 @@ function defaultValues() {
 	$('.selected').removeClass('selected');
 	$('.start-quiz').removeClass('active');
 	$('.submit').addClass('inactive');
+	$('.next').text('Next Question');
 	$('.fa.fa-music').parent().remove();
 
 	quiz = null;

@@ -7,7 +7,7 @@ var easy = [
 		question: 'The 1984 film \'Amadeus\' was based off of the life of which famous composer?',
 		correct: 'Wolfgang Amadeus Mozart',
 		choices: ['John Cage', 'Karl Amadeus Hartmann', 'Igor Stravinsky', 'Wolfgang Amadeus Mozart'],
-		info: 'Wolfgang Amadeus Mozart (1756-1791) was a musical prodigy that had already performed in front of most of Europe\'s nobiility by the time he was ten. Despite being in high demand, he spent much of his career in debt due to his extravangant lifestyle. Mozart died of a sudden illness at the young age of 35. Some have suggested that he was poisoned by a rival composer named Salieri, as shown in \'Amadeus\'.',
+		info: 'Wolfgang Amadeus Mozart (1756-1791) was a musical prodigy that had already performed in front of most of Europe\'s nobiility by the time he was ten. He was able to listen to a piece of music once and write the entire thing down without mistakes. Mozart died of a sudden illness at the young age of 35. Some have suggested that he was poisoned by a rival composer named Salieri, as shown in \'Amadeus\'.',
 		picture: 'images/mozart.jpg',
 	},
 	
@@ -51,7 +51,7 @@ var hard = [
 		question: 'What was Hildegard von Bingen\'s favorite color?',
 		correct: 'Green',
 		choices: ['Green', 'Red', 'Yellow', 'Blue'],
-		info: 'Hildegard von Bingen (1098-1179) was a Benedictine nun that is one of the first female composers that we have record of. She wrote a play called \'Ordo Virtutum\' (Order of the Virtues) which depicts a battle between the Virtues and the Devil for a human soul. Hildegard was known to be fond of the color green as it symoblized regeneration and renewal in creation.',
+		info: 'Hildegard von Bingen (1098-1179) was a Benedictine nun that is one of the first female composers that we have record of. She wrote a musical drama called \'Ordo Virtutum\' (Order of the Virtues) which depicts a battle between the Virtues and the Devil for a human soul. Hildegard was known to be fond of the color green as it symoblized regeneration and renewal in creation.',
 		picture: 'images/hildegard.jpg',
 	},
 
@@ -59,7 +59,7 @@ var hard = [
 		question: 'Which composer was such an obsessive perfectionist that he regularly synchronized all of the clocks in his apartment?',
 		correct: 'Dmitri Shostakovich',
 		choices: ['Antonio Vivaldi', 'Ludwig Van Beethoven', 'Gustav Mahler', 'Dmitri Shostakovich'],
-		info: 'Dmitri Shostakovich (1906-1975) was a Russian composer marked by his complicated relationship with the Soviet Union. In 1936 he was denounced by the USSR after Joseph Stalin attended (and disliked) one of his operas. His Fifth Symphony was written as an apology to Stalin. In addition to synchronizing his clocks, he also regularly sent himself letters to test the postal service.',
+		info: 'Dmitri Shostakovich (1906-1975) was a Russian composer marked by his complicated relationship with the Soviet Union. In 1936 he was denounced by the USSR after Joseph Stalin attended (and disliked) one of his operas. His Fifth Symphony was written as an apology to Stalin. He was known to be obsessed with order: in addition to synchronizing his clocks, he also regularly sent himself letters to test the postal service.',
 		picture: 'images/shostakovich.jpg',
 	},
 
@@ -83,7 +83,7 @@ var hard = [
 		question: 'Which composer died of a chill after coming home one night only to find that his wife had locked him out?',
 		correct: 'Henry Purcell',
 		choices: ['Pyotr Ilych Tchaikovsky', 'Henry Purcell', 'Frederic Chopin', 'Hector Berlioz'],
-		info: 'Although Henry Purcell (1659-1695) only lived for 35 years, he managed to greatly influence the musical landscape of Englandin the 1600s. Although Purcell worked as a church musician, he also composed music for operas and plays. An alternate theory regarding his death is that he ate poisoned chocolate.',
+		info: 'Although Henry Purcell (1659-1695) only lived for 35 years, he managed to greatly influence the musical landscape of England in the 1600s. Although Purcell worked as a church musician, he also composed music for operas and plays. An alternate theory regarding his death is that he ate poisoned chocolate.',
 		picture: 'images/purcell.jpg',
 	},
 ];
