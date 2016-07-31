@@ -1,5 +1,3 @@
-$(document).ready(function() {
-/*--- GLOBAL VARIABLES ---*/
 var incIndex = (function() {
 	var cnt = 0;
 
@@ -13,6 +11,9 @@ var incIndex = (function() {
 	};
 }());
 
+/*------------------------------------------------------------------------------------------------*/
+$(document).ready(function() {
+/*--- GLOBAL VARIABLES ---*/
 var quiz;
 var current = incIndex();
 var score = 0;
@@ -31,9 +32,9 @@ $('.start-quiz').click(function() {
 		var choice = $('.difficulty-buttons').find('.selected');
 		
 		if (choice.hasClass('easy')) { 
-			quiz = easy; 
+			quiz = quizzes.easy; 
 		} else {
-			quiz = hard;
+			quiz = quizzes.hard;
 		}
 		
 		$('.new-game-screen').addClass('hidden');
