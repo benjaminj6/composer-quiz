@@ -1,0 +1,26 @@
+{
+  "name": "composer-quiz",
+  "version": "1.0.0",
+  "description": "A quiz app that covers composers.",
+  "main": "js/app,js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminj6/composer-quiz.git"
+  },
+  "author": "Benjamin Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminj6/composer-quiz/issues"
+  },
+  "homepage": "https://github.com/benjaminj6/composer-quiz#readme",
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "less": "^2.7.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0",
+    "normalize.css": "^4.2.0"
+  }
+}
