@@ -1,0 +1,227 @@
+/*--- GLOBAL ---*/
+* {
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+html {
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/music-paper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*--- BUTTON STYLING RULES & MIXINS ---*/
+button {
+  border: none;
+  border-radius: 3.5px;
+  font-size: 20px;
+  padding: 15px 0;
+}
+button:focus {
+  outline: none;
+}
+/*--- GENERAL STYLING CLASSES ---*/
+/*--- HEADER ---*/
+header {
+  padding: 30px;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 3em;
+}
+/*--- MAIN ---*/
+main div.content-wrapper {
+  margin: 0 auto 50px;
+  max-width: 600px;
+  padding: 0 5px;
+}
+/*--- .OPENING-SCREEN ---*/
+.new-game-screen {
+  margin-top: 100px;
+  margin: 100px auto 0;
+  max-width: 400px;
+  text-align: center;
+}
+.new-game-screen h3 {
+  font-size: 26px;
+}
+.difficulty-buttons {
+  font-size: 0;
+}
+.difficulty-buttons button {
+  box-sizing: border-box;
+  opacity: 1;
+  /*height: 50px;*/
+  /*padding: 15px 0;*/
+  width: 45%;
+  /* 45% * 2 buttons = 90% of container */
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.difficulty-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.difficulty-buttons button:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+button.start-quiz {
+  background-color: #64a0be;
+  opacity: 0.3;
+  margin-top: 2px;
+  width: 90%;
+}
+button.start-quiz:hover {
+  background-color: #5295b6;
+}
+button.start-quiz:focus {
+  background-color: #5295b6;
+}
+button.start-quiz.active {
+  opacity: 1;
+}
+/*--- .QUESTIONS-SCREEN ---*/
+.questions-screen {
+  font-size: 20px;
+  text-align: center;
+}
+.question-headers {
+  font-size: 16px;
+  text-align: left;
+  opacity: 0.8;
+}
+.question-headers h4.question-number {
+  display: inline;
+  color: #64a0be;
+  font-weight: bold;
+}
+.question-headers .current-score {
+  float: right;
+}
+.question-headers .current-score h4 {
+  display: inline;
+  color: #64a0be;
+  font-weight: bold;
+}
+.question-headers .current-score ul {
+  display: inline;
+  padding-left: 0;
+}
+.question-headers .current-score ul li.symbol {
+  display: inline;
+  margin-left: 20px;
+  list-style: none;
+}
+.question-headers .current-score ul li.symbol i {
+  color: #64a0be;
+  font-weight: bold;
+}
+h3.current-question {
+  font-size: 26px;
+  margin: 5px auto;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+}
+ul.choices {
+  list-style: none;
+  margin: 80px auto 0;
+  padding-left: 0;
+}
+ul.choices li {
+  border-radius: 3.5px;
+  margin: 5px auto;
+}
+ul.choices li button {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  height: 100%;
+  width: 100%;
+}
+ul.choices li button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+ul.choices li button:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+button.submit {
+  background-color: #64a0be;
+  opacity: 0.3;
+  margin: 0 auto;
+  width: 100%;
+}
+button.submit:hover {
+  background-color: #5295b6;
+}
+button.submit:focus {
+  background-color: #5295b6;
+}
+button.submit.active {
+  opacity: 1;
+}
+/*--- .ANSWER-SCREEN ---*/
+.answer-screen {
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  border-radius: 3.5px;
+}
+.answer-screen h3 {
+  font-size: 28px;
+  margin: 15px 0 0;
+  font-family: 'Playfair Display', sans-serif;
+}
+.answer-screen hr {
+  margin: 15px 0;
+}
+.answer-screen img {
+  float: left;
+  width: 285px;
+  height: 300px;
+  object-fit: cover;
+}
+.answer-screen p {
+  text-align: left;
+  height: 300px;
+  width: 285px;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 18px;
+}
+.answer-screen button.next {
+  background-color: #64a0be;
+  opacity: 0.3;
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+  /*padding: 15px 0;*/
+}
+.answer-screen button.next:hover {
+  background-color: #5295b6;
+}
+.answer-screen button.next:focus {
+  background-color: #5295b6;
+}
+.answer-screen button.next.active {
+  opacity: 1;
+}
+/*--- FOOTER ---*/
+footer {
+  margin-top: 100px;
+  padding: 30px;
+  font-size: 10px;
+  opacity: 0.5;
+  text-align: center;
+}
+/*--- INTERACTIVE CLASSES ---*/
+/* Hidden class */
+.hidden {
+  display: none;
+}
+.active {
+  opacity: 1;
+}
+/*# sourceMappingURL=1.0.0.css.map */

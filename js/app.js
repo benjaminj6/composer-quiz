@@ -49,7 +49,7 @@ function displayQuestion(index) {
 	$('.current-question').text(quiz[index].question);
 	
 	for (var i = 0; i < quiz[index].choices.length; i++) {
-		$('.choices').append('<li class="choice">' + quiz[index].choices[i] + '</li');
+		$('.choices').append('<li class="choice"><button>' + quiz[index].choices[i] + '</button></li');
 	}
 }
 

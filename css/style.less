@@ -1,0 +1,289 @@
+@hover-white: rgba(255,255,255,0.2);
+@focus-white: rgba(255,255,255,0.5);
+@teal: rgba(100,160,190,1);
+@dark-teal: darken(@teal, 5%);
+
+.color-text() {
+  color: @teal;
+  font-weight: bold;
+}
+
+/*--- GLOBAL ---*/
+
+* {
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  color:#fff;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: 
+	  linear-gradient( 
+	  	rgba(0, 0, 0, 0.4), 
+	  	rgba(0, 0, 0, 0.4)),
+    url('../images/music-paper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/*--- BUTTON STYLING RULES & MIXINS ---*/
+button {
+  border: none;
+  border-radius: 3.5px;
+  font-size: 20px;
+  padding: 15px 0;
+  // background-color: @teal;
+  // opacity: 0.3;
+
+  // &:hover {
+  //   background-color: @dark-teal;
+  // }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.set-button-colors(@bg; @hover; @focus) {
+  background-color: @bg;
+
+  &:hover {
+    background-color: @hover;
+  }
+
+  &:focus {
+    background-color: @focus;
+  }
+}
+
+.clear-button() {
+  .set-button-colors(transparent; @hover-white; @focus-white);
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.teal-button() {
+  .set-button-colors(@teal; @dark-teal; @dark-teal);
+  opacity: 0.3;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+/*--- GENERAL STYLING CLASSES ---*/
+
+
+
+/*--- HEADER ---*/
+
+header {
+  padding: 30px;
+}
+
+header h1 {
+	font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 3em;
+}
+
+header hr {}
+
+/*--- MAIN ---*/
+
+main {
+}
+
+main div.content-wrapper {
+  margin: 0 auto 50px;
+  max-width: 600px;
+  padding: 0 5px;
+}
+
+/*--- .OPENING-SCREEN ---*/
+
+.new-game-screen {
+  margin-top: 100px;
+  margin: 100px auto 0;
+  max-width: 400px;
+  text-align: center;
+
+  h3 {
+    font-size: 26px;
+  }
+}
+
+.difficulty-buttons {
+  font-size: 0;
+
+  button {
+    box-sizing: border-box; 
+    // border: 2px solid rgba(255,255,255,0.3);
+    // background-color: transparent;
+    opacity: 1;
+    /*height: 50px;*/
+    /*padding: 15px 0;*/
+    width: 45%; /* 45% * 2 buttons = 90% of container */
+    .clear-button;
+  }
+
+}
+
+button.start-quiz {
+  .teal-button;
+  margin-top: 2px;
+  width: 90%;
+  
+}
+
+/*--- .QUESTIONS-SCREEN ---*/
+
+.questions-screen {
+  font-size: 20px;
+  text-align: center;
+}
+
+.question-headers {
+  font-size: 16px;
+  text-align: left;
+  opacity: 0.8;
+
+  h4.question-number {
+    display: inline;
+    .color-text;
+  }
+
+  .current-score {
+    float:right;
+    
+    h4 {
+      display: inline;
+      .color-text;
+    }
+
+    ul {
+      display: inline;
+      padding-left: 0;
+      
+      li.symbol {
+        display: inline;
+        margin-left: 20px;
+        list-style: none;
+        
+        i {
+          .color-text;
+        }
+
+      }
+    }
+  }
+}
+
+h3.current-question {
+  font-size: 26px;
+  margin: 5px auto;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+}
+ 
+ul.choices {
+  list-style: none;
+  margin: 80px auto 0;
+  padding-left: 0;
+
+  li {
+    border-radius: 3.5px;
+    margin: 5px auto;
+
+    button {
+      .clear-button;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+
+button.submit {
+  .teal-button;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*--- .ANSWER-SCREEN ---*/
+
+// TO DO: implement nested selectors
+
+.answer-screen {
+	background: rgba(255,255,255,0.4);
+	color: #000;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3.5px;
+
+  h3 {
+  	font-size: 28px;
+  	margin: 15px 0 0;
+  	font-family: 'Playfair Display', sans-serif;
+  }
+
+  hr {
+  	margin: 15px 0;
+  }
+
+  img {
+  	float: left;
+  	width: 285px;
+  	height: 300px;
+  	object-fit: cover;
+  }
+
+  p {
+  	text-align: left;
+  	height: 300px;
+  	width: 285px;
+  	display: inline-block;
+  	margin: 0 0 0 10px;
+  	font-size: 18px;
+  }
+
+  button.next {
+    .teal-button;
+  	display: block;
+  	margin: 15px auto;
+  	width: 100%;
+  	/*padding: 15px 0;*/
+  }
+}
+
+/*--- FOOTER ---*/
+footer {
+  margin-top: 100px;
+  padding: 30px;
+  font-size: 10px;
+  opacity: 0.5;
+  text-align:center;
+}
+/*--- INTERACTIVE CLASSES ---*/
+
+/* Hidden class */
+
+.hidden {
+  display: none;
+}
+
+.active {
+  opacity: 1;
+}
+
+// /* Selected item class */
+// .selected, .selected:hover {
+//   background-color: rgba(255,255,255,0.5) !important;  
+// }
+
+
