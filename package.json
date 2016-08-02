@@ -2,12 +2,12 @@
   "name": "composer-quiz",
   "version": "1.0.0",
   "description": "A quiz app that covers composers.",
-  "main": "js/app,js",
+  "main": "js/app.js",
   "scripts": {
     "mkdir": "mkdir -p build",
-    "build": "npm run clean && npm run mkdir && npm run build:html && npm run build:css",
+    "build": "npm run clean && npm run mkdir && npm run build:html && npm run build:css && npm run build:js",
     "clean": "rm -rf build",
-    "watch": "npm run watch:html & npm run watch:css",
+    "watch": "npm run watch:html & npm run watch:css & npm run watch:js",
     "build:html": "npm run clean:html && cp index.html build/",
     "clean:html": "rm -f build/index.html",
     "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
@@ -19,7 +19,10 @@
     "watch:css:unminified": "npm run build:css && chokidar 'css/**/*.(less|css)' -c 'npm run build:css'",
     "build:css:minified": "npm run clean:css:minified && lessc --clean-css --source-map css/style.less build/$npm_package_version.min.css",
     "clean:css:minified": "rm -f build/$npm_package_name.$npm_package_version.min.css build/$npm_package_name.npm_package_version.min.css.map",
-    "watch:css:minified": "npm run build:css:minified && chokidar 'css/**/*.(less|css)' -c 'npm run build:css:minified'"
+    "watch:css:minified": "npm run build:css:minified && chokidar 'css/**/*.(less|css)' -c 'npm run build:css:minified'",
+    "build:js": "npm run clean:js && webpack",
+    "clean:js": "rm -f build/$npm_package_name.$npm_package_version.js build/$npm_package_name.$npm_package_version.js.map",
+    "watch:js": "npm run build:js && webpack --watch"
   },
   "repository": {
     "type": "git",
