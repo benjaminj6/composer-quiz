@@ -11,9 +11,15 @@
     "build:html": "npm run clean:html && cp index.html build/",
     "clean:html": "rm -f build/index.html",
     "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
-    "build:css": "npm run clean:css && lessc --source-map css/style.less build/$npm_package_version.css",
-    "clean:css": "rm -f build/$npm_package_name.$npm_package_version.css build/$npm_package_name.npm_package_version.map",
-    "watch:css": "npm run build:css && chokidar 'css/**/*.less' -c 'npm run build:css'"
+    "build:css": "npm run build:css:unminified && npm run build:css:minified",
+    "clean:css": "npm run clean:css:unminified && npm run clean:css:unminified",
+    "watch:css": "npm run watch:css:unminified & npm run watch:css:minified",
+    "build:css:unminified": "npm run clean:css && lessc --source-map css/style.less build/$npm_package_version.css",
+    "clean:css:unminified": "rm -f build/$npm_package_name.$npm_package_version.css build/$npm_package_name.npm_package_version.css.map",
+    "watch:css:unminified": "npm run build:css && chokidar 'css/**/*.(less|css)' -c 'npm run build:css'",
+    "build:css:minified": "npm run clean:css:minified && lessc --clean-css --source-map css/style.less build/$npm_package_version.min.css",
+    "clean:css:minified": "rm -f build/$npm_package_name.$npm_package_version.min.css build/$npm_package_name.npm_package_version.min.css.map",
+    "watch:css:minified": "npm run build:css:minified && chokidar 'css/**/*.(less|css)' -c 'npm run build:css:minified'"
   },
   "repository": {
     "type": "git",
@@ -27,7 +33,14 @@
   "homepage": "https://github.com/benjaminj6/composer-quiz#readme",
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
-    "less": "^2.7.1"
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^6.0.0",
+    "less": "^2.7.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "webpack": "^1.13.1"
   },
   "dependencies": {
     "font-awesome": "^4.6.3",
